@@ -40,7 +40,7 @@ function Projects() {
         tech="React • Vite • CSS • GitHub Pages"
         projectN="Portfolio Site"
         projectD="Interactive portfolio experience with 3D elements, parallax scrolling, and fluid animations — showcasing modern web design principles and performance optimization."
-        link="https://tu-portfolio.com"
+        link="https://abdiel-code.github.io/abdiel-codes/"
       />
     </div>
   );
