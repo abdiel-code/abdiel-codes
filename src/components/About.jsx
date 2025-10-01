@@ -1,29 +1,40 @@
 import "../stylesheets/About.css";
 
 function About() {
-    return (
-        <div className="about-container">
-            <h1 className="about-title">
-                Hi! My name is Abdiel Flores, a Full-Stack Developer.
-            </h1>
-            
-            <p className="about-text">
-  I have experience working with JavaScript, CSS, React, C# and Python, focusing on creating responsive, scalable and accessible web applications.
-</p>
-<p className="about-text">
-  My journey into software development started with a passion for technology and curiosity about how things work. Over time, I have worked on various projects, improving both my front-end and back-end skills.
-</p>
-<h3>Core Philosophy</h3>
-<p className="about-text">
-  I believe that great software development is not just about writing code but also about creating intuitive and accessible experiences. That's why I pay attention to both performance and user experience.
-</p>
-<h3>Outside the Code</h3>
-<p className="about-text">
-  When I'm not coding, I enjoy exploring new technologies, listening to podcasts, and improving my problem-solving skills. I'm always open to new challenges and collaborations!
-</p>
+  return (
+    <div className="about-container">
+      <h1 className="about-title">
+        Hi! I'm Abdiel Flores — a modular architect, developer, and technical
+        narrator.
+      </h1>
 
-        </div>
-    )
+      <p className="about-text">
+        I build systems that are resilient, cooperative, and emotionally
+        intelligent. My work blends architecture, code, and clarity — from
+        collaborative task platforms in React to modular design patterns that
+        prioritize user experience.
+      </p>
+      <p className="about-text">
+        I specialize in real-time flows, frontend/backend integration, and
+        granular breakdowns. Whether debugging a payload or refining a user
+        interface, I treat every module as a story and every bug as a lesson.
+      </p>
+      <h3>Core Philosophy</h3>
+      <p className="about-text">
+        I believe great software is not just functional but it's empathetic. I
+        design with users in mind, crafting experiences that feel intuitive,
+        resilient, and joyful. My systems celebrate clarity, modularity, and
+        shared wins.
+      </p>
+      <h3>Outside the Code</h3>
+      <p className="about-text">
+        I explore technical metaphors, build skill trees for learning, and turn
+        debugging into playful rituals. I’m always open to collaboration,
+        especially when it means co-designing tools that teach, adapt, and
+        connect.
+      </p>
+    </div>
+  );
 }
 
 export default About;

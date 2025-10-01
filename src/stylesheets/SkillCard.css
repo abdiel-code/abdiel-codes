@@ -1,23 +1,44 @@
 .card-skill-container:hover .skill-card-title-container,
 .card-skill-container:hover .skill-card-text-container {
-    border-color: #ECF39E;
-    box-shadow: 0 0 10px #ECF39E;
+  border-color: #ecf39e;
+  box-shadow: 0 0 10px #ecf39e;
+}
+
+.skill-card-title {
+  text-align: center;
 }
 
 .skill-card-title-container {
-    border: 2px solid white;
+  border: 2px solid white;
 }
 
 .skill-card-text-container {
-    border: 2px solid white;
-    border-top: none;
+  border: 2px solid white;
+  border-top: none;
 }
 
 .card-skill-container {
-    transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
+.skill-card-word::before {
+  content: "* ";
+  color: var(--accent-color);
+}
+
+.skill-card-container {
+  padding: 20px;
+  gap: 20px;
+}
+
+.skill-card-container li {
+  list-style-type: none;
+}
+
+.card-skill-container {
+  transition: transform 0.3s ease;
+}
 
 .card-skill-container:hover {
-    transform: scale(1.1);
+  transform: scale(1.05);
 }

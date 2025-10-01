@@ -1,13 +1,26 @@
 .second-section .button:hover {
-    color: #ECF39E;
-    cursor: pointer;
+  color: #ecf39e;
+  cursor: pointer;
 }
 
 .button {
+  border: none;
+  background-color: #132a13;
+  color: #abb2bf;
+  cursor: pointer;
+  pad: 10px;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .button {
     border: none;
-    background-color: #132A13;
-    color: #ABB2BF;
+    background-color: #132a13;
+    color: #abb2bf;
     cursor: pointer;
-    pad: 10px;
-    font-size: 1.2rem;
+    padding: 10px;
+    font-size: 1.3rem;
+    width: 100%;
+    text-align: left;
+  }
 }

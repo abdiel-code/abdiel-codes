@@ -1,7 +1,12 @@
-import "../stylesheets/Nav.css";
+import { useState } from "react";
+import "../stylesheets/Sidebar.css";
 import NavButton from "./NavButton";
 
-function Nav() {
+function Sidebar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   const navigateTo = (id) => {
     const section = document.getElementById(id);
 
@@ -37,39 +42,44 @@ function Nav() {
   };
 
   return (
-    <div className="navigation-container">
-      <div className="first-section">
-        <p>Abdiel Flores</p>
-      </div>
-      <div className="second-section">
+    <>
+      <nav className="navigation-container">
+        <button className="hamburger-button" onClick={toggleMenu}>
+          ☰
+        </button>
+
+        <div className="first-section">
+          <p className="logo">Abdiel Flores</p>
+        </div>
+      </nav>
+
+      {isOpen && <div className="sidebar-overlay" onClick={toggleMenu}></div>}
+
+      <div className={`sidebar ${isOpen ? "open" : ""}`}>
         <NavButton
           class="home-button button"
           symbol="#"
           name="Home"
           link={() => navigateTo("home")}
         />
-
         <NavButton
           class="about-me-button button"
           symbol="#"
           name="About-me"
           link={() => navigateTo("about-me")}
         />
-
         <NavButton
           class="projects-button button"
           symbol="#"
           name="Projects"
           link={() => navigateTo("projects")}
         />
-
         <NavButton
           class="skills-button button"
           symbol="#"
           name="Skills"
           link={() => navigateTo("skills")}
         />
-
         <NavButton
           class="contact-button button"
           symbol="#"
@@ -77,8 +87,8 @@ function Nav() {
           link={() => navigateTo("contact")}
         />
       </div>
-    </div>
+    </>
   );
 }
 
-export default Nav;
+export default Sidebar;

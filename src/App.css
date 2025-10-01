@@ -1,10 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Fira Code;
+html {
+  scroll-behavior: smooth;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Fira Code;
+}
 
 .fira-code {
   font-family: "Fira Code", monospace;
@@ -13,82 +16,72 @@
   font-style: normal;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    background-color: #121913;
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #121913;
 }
 
 span {
-  color: #4F772D;
-}
-
-.click-container {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    overflow: hidden;
+  color: #4f772d;
 }
 
 .app-container {
-    width: 100%;
-    height: 100%;
-  }
+  width: 100%;
+  height: 100%;
+}
 
-  .click-effect {
-    position: fixed;
-    pointer-events: none;
-  }
-  
-  .click-effect-line {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.7);
-    width: 2px;
+.click-effect {
+  position: fixed;
+  pointer-events: none;
+}
+
+.click-effect-line {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7);
+  width: 2px;
+  height: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: click-effect-expand 1s ease-out;
+}
+
+.click-effect-line:nth-child(1) {
+  left: -8px;
+  animation-delay: 0s;
+}
+
+.click-effect-line:nth-child(2) {
+  left: -4px;
+  animation-delay: 0.1s;
+}
+
+.click-effect-line:nth-child(3) {
+  left: 0px;
+  animation-delay: 0.2s;
+}
+
+.click-effect-line:nth-child(4) {
+  left: 4px;
+  animation-delay: 0.3s;
+}
+
+.click-effect-line:nth-child(5) {
+  left: 8px;
+  animation-delay: 0.4s;
+}
+
+@keyframes click-effect-expand {
+  0% {
     height: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    animation: click-effect-expand 1s ease-out;
+    opacity: 1;
   }
-  
-  .click-effect-line:nth-child(1) {
-    left: -8px;
-    animation-delay: 0s;
+  50% {
+    height: 15px;
+    opacity: 0.7;
   }
-  
-  .click-effect-line:nth-child(2) {
-    left: -4px;
-    animation-delay: 0.1s;
+  100% {
+    height: 30px;
+    opacity: 0;
   }
-  
-  .click-effect-line:nth-child(3) {
-    left: 0px;
-    animation-delay: 0.2s;
-  }
-  
-  .click-effect-line:nth-child(4) {
-    left: 4px;
-    animation-delay: 0.3s;
-  }
-  
-  .click-effect-line:nth-child(5) {
-    left: 8px;
-    animation-delay: 0.4s;
-  }
-  
-  @keyframes click-effect-expand {
-    0% {
-      height: 0;
-      opacity: 1;
-    }
-    50% {
-      height: 15px;
-      opacity: 0.7;
-    }
-    100% {
-      height: 30px;
-      opacity: 0;
-    }
-  }
-  
+}
